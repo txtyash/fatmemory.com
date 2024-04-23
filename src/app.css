@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Adelica Brush';
+    src: url('/fonts/adelica-brush.otf');
+    font-weight: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Cute Dino';
+    src: url('/fonts/cute-dino.otf');
+    font-weight: normal;
+    font-display: swap;
+  }
+}

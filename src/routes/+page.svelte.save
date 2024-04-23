@@ -1,0 +1,27 @@
+j<script lang="ts">
+import { onMount } from 'svelte'
+const src = '/images/brain.gif';
+let loading = true;
+
+onMount(() => {
+    const img = new Image();
+    img.src = src;  // Force the browser to load the src, even though it's not visible yet
+    img.oload = () => {
+        loading = false;
+    }
+})
+</script>
+
+<!-- Brain Animation -->
+<div >
+{#if loading}
+    <img src="/images/brain-frame-one.webp" alt="blue brain"/>
+{:else}
+	<img src="/images/brain.gif" class="placeholder" alt="Rotating blue brain animation" />
+{/if}
+</div>
+
+<!-- Word Art -->
+<div class="h-2/3 w-[180%] absolute bottom-0 rounded-t-[100%] bg-black" >
+  stuff
+</div>
